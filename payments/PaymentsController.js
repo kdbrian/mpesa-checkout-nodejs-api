@@ -77,7 +77,7 @@ class Transaction {
         this.Timestamp = this.generateDate()
         this.BusinessShortCode=process.env.BusinessShortCode || '174379'
         this.PartyB=process.env.PartyB || '174379'
-        this.CallBackURL = `${process.env.HOST}${process.env.CallBackURL}` || '/error'
+        this.CallBackURL = `${process.env.CallBackURL}` || '/error'
         this.AccountReference = crypto.randomUUID()
         this.TransactionDesc = `Payment from ${phone} of ${amount}.`
         this.Password= this.generatePassword()
